@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="dropdown in top navigation bar">
+        <title>nav dropdown</title>
+        <style>
+        .container
+            {
+                background-color: blue;
+                overflow: hidden;
+            }
+        .container a
+            {
+                float: left;
+                text-align: center;
+                text-decoration: none;
+                font-size: 20px;
+                padding: 10px 20px;
+                color: white;
+            }
+        .drop 
+            {
+                float: left;
+                overflow: hidden;
+            }
+        .drop .btn
+            {
+                border: none;
+                outline: none;
+                font-size: 20px;
+                padding: 10px 20px;
+                color: white;
+                background-color: inherit;
+            }
+        .container a:hover , .drop:hover .btn
+            {
+                background-color: cadetblue;
+            }
+        .drop-content
+            {   display: none;
+                position: absolute;
+                background-color: antiquewhite;
+                min-width: 180px;
+                box-shadow: 0px 10px 20x 0px rgba(0,0,0,0.2);
+                z-index: 1;
+            }
+        .drop-content a
+            {
+                display: block;
+                float: none;
+                color: black;
+                text-align: center;
+                padding: 10px 0px;
+                text-decoration: none;
+            }
+        .drop-content a:hover
+            {
+                background-color: cornsilk;
+            }
+        .drop:hover .drop-content
+            {
+                display: block;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <a href="#">home</a>
+            <a href="#">register</a>
+            <div class="drop">
+                <button class="btn">dropdown</button>
+                <div class="drop-content">
+                    <a href="#">row 1 </a>
+                    <a href="#">row 1</a>
+                    <a href="#">row 1</a>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
