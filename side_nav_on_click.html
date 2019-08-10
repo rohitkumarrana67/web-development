@@ -1,0 +1,102 @@
+<! doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="side navigation on click">
+        <title>side nav</title>
+    </head>
+    <style>
+      
+      .container-content
+        {
+            background-color:black;
+            overflow:hidden;
+            width: 100%;
+            position: fixed;
+            left: 0;
+            right: 0;
+            
+        }
+      .container-content a
+        {
+            float: left;
+            text-align: center;
+            padding: 10px 20px;
+            font-size: 20px;
+            text-decoration: none;
+            color: white;
+        }
+      .container-content a:hover
+        {
+            background-color: whitesmoke;
+            color: black;
+        }
+      .sidenav
+        {
+            position: fixed;
+            height: 100%;
+            width: 0;
+            left: 0;
+            overflow-x: hidden;
+            background-color: black;
+            opacity: 0.5;
+            top: 50px;
+            z-index: 1;
+            transition: 1s;
+            
+        }
+       .sidenav a
+        {   margin-top: 15px;
+            display: block;
+            color: white;
+            font-size: 20px;
+            padding: 2px 40px;
+            text-decoration: none;
+            transition: 0.5s;
+        }
+        
+        .sidenav a:hover
+        {   color:whitesmoke;
+            font-size: 22px;;
+        }
+        .clsbtn
+        {
+            position: absolute;
+            left: 120px;
+            color: black;
+            
+        }
+        
+       
+    </style>
+    <body>
+        
+     
+            <div class="container-content">
+            <a onclick="openNav()">Menu</a>
+            <a href="#">Register</a>
+            <a href="#">Contact</a>
+            <a href="#">Help</a>
+            </div>
+             
+            <div id="demo" class="sidenav">
+                <a class="clsbtn" onclick="closeNav()">&times;</a>
+                <a href="#">HTML</a>
+                <a href="#">CSS</a>
+                <a href="#">JAVASCRIPT</a>
+                
+            </div>
+            <script>
+        
+             function openNav()
+                {
+                    document.getElementById("demo").style.width="200px";
+                }
+            function closeNav()
+                {
+                    document.getElementById("demo").style.width="0";
+                }
+        </script>
+        
+    </body>
+</html>
